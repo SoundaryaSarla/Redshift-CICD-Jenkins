@@ -149,6 +149,7 @@ def main():
 		# can be passed via sys.argv. This was an issue on large commits.
 		#git_commit_list = ['.' + os.sep + x for x in sys.argv[6].splitlines()]
 		commit_file = "/tmp/git_diff_files_" + sys.argv[6]
+		print(commit_file)
 		git_commit_list = []	
 		with open(commit_file) as f:	
 			for line in f.read().splitlines():	
