@@ -140,8 +140,8 @@ def main():
 	try:
 
 		# Argument validation: make sure the correct number of arguments was supplied
-		#if len(sys.argv) != 7 or len(sys.argv[6]) < 1:
-			#raise Exception("Invalid command line arguments. Expected <host> <database> <port> <username> <password> <commit_id> where <commit_id> is the hash for the most \\n recent commit. Note that this error may also appear if you do not have any tags on your project. You need at least one to start off.")
+		if len(sys.argv) != 7 or len(sys.argv[6]) < 1:
+			raise Exception("Invalid command line arguments. Expected <host> <database> <port> <username> <password> <commit_id> where <commit_id> is the hash for the most \\n recent commit. Note that this error may also appear if you do not have any tags on your project. You need at least one to start off.")
 
 
 		# Build lists of SQL objects to be deployed. Split the new commit changes
